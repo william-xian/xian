@@ -1,0 +1,55 @@
+---
+layout: default
+title: DesignPatterns
+date: {{ page.date }}
+category: Anything
+excerpt: null
+---
+<html>
+<body>
+<h2>{{ page.title }}</h2>
+<p></p>
+<ol>
+<li>
+	单例模式:
+	<code>
+		public class Singleton{
+				private static Object instance = null;
+				private Singleton(){}
+				public synchroized Object getInstance(){
+						if(instance == null)
+								instance = new Singleton();
+						return instance;
+				}
+		}
+
+	</code>
+	工厂模式
+	抽象工厂模式
+	建造模式
+	原型模式
+
+	迭代模式
+	观察者模式
+	模版方法
+	命令模式
+	状态模式
+	策略模式
+	责任链模式
+	中介者模式
+	访问者模式
+	解释器模式
+	备忘录模式
+
+	组合模式
+	外观模式
+	代理模式
+	适配器模式
+	装饰模式
+	桥接模式
+	享原模式
+
+</li>
+</ol>
+</body>
+</html>

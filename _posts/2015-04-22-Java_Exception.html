@@ -1,0 +1,42 @@
+---
+layout: default
+title: Java异常机制
+date: {{ page.date }}
+category: Anything
+excerpt :null
+---
+
+<h2>{{ page.title }}</h2>
+<textarea cols='160' rows='100'>
+1.异常的结构有那些；
+2.异常的处理机制是什么；
+3.编写代码时应该清楚什么；（编译时异常有谁处理）。
+
+异常体系机构：
+.
+└── Throwable
+    ├── Error
+    │   ├── AWTError
+	│   └── VirtualMachineError
+	│       ├── OutOfMemoryError
+	│       └── StackOverFlowError
+    └── Exception
+        ├── IOException
+        │   ├── EOFException
+		│   └── FileNotFoundException
+		└── RunnableException
+			├── ArrayIndexOutOfBoundsException
+			├── ArrithmeticException
+			├── ClassNotFoundException
+			├── IllegalArgumentException
+			├── MissingResourceException
+			├── NullPointerException
+			└── UnknownTypeException
+
+异常处理机制：
+	try｛ ｝catch(){}finally{}
+	throw,throws明确异常是否该被捕获，是否该处理异常。
+</textarea>
+
+
+<p>{{ page.date | date_to_string }}</p>
