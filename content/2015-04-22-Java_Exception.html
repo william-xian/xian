@@ -1,0 +1,44 @@
+---
+layout: default
+title: Java异常机制
+date: {{ page.date }}
+category: Anything
+excerpt :null
+---
+
+<h2>{{ page.title }}</h2>
+<textarea cols='160' rows='100'>
+1.异常的结构有那些；
+2.异常的处理机制是什么；
+3.编写代码时应该清楚什么；（编译时异常有谁处理）。
+
+异常体系机构：
+.
+└── Throwable
+    ├── Error
+    │   ├── AWTError
+	│   └── VirtualMachineError
+	│       ├── OutOfMemoryError
+	│       └── StackOverFlowError
+    └── Exception
+        ├── IOException
+        │   ├── EOFException
+		│   └── FileNotFoundException
+		└── RunnableException
+			├── ArrayIndexOutOfBoundsException
+			├── ArrithmeticException
+			├── ClassNotFoundException
+			├── IllegalArgumentException
+			├── MissingResourceException
+			├── NullPointerException
+			└── UnknownTypeException
+
+异常处理机制：
+	1.熟悉try{}catch(){}finally{}以及和return的运行情况和运行机制。
+	2.throw,throws明确异常是否该被捕获，异常应该由谁处理。
+	3.异常产生的3种原因：a.程序运行时产生错误。（数组越界，除数为零等）b.使用throw。c.发生异步异常，线程调用了stop。
+	4.了解异常的内部实现机制.异常是由信号机制实现的。再发生异常时，程序从用户态切换到核心态。
+</textarea>
+
+
+<p>{{ page.date | date_to_string }}</p>
