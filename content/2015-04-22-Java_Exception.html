@@ -34,8 +34,10 @@ excerpt :null
 			└── UnknownTypeException
 
 异常处理机制：
-	try｛ ｝catch(){}finally{}
-	throw,throws明确异常是否该被捕获，是否该处理异常。
+	1.熟悉try{}catch(){}finally{}以及和return的运行情况和运行机制。
+	2.throw,throws明确异常是否该被捕获，异常应该由谁处理。
+	3.异常产生的3种原因：a.程序运行时产生错误。（数组越界，除数为零等）b.使用throw。c.发生异步异常，线程调用了stop。
+	4.了解异常的内部实现机制.异常是由信号机制实现的。再发生异常时，程序从用户态切换到核心态。
 </textarea>
 
 
